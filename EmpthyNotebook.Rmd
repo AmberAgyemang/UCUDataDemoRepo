@@ -11,6 +11,16 @@ library(tidyverse)
 
 movies_correcr <- movies %>% #creates a new data file
   filter(decade== "2000s")#with only movies from th 2000s
+
+#The variables that wwe want to plot against each other are budget and revenue, we will now plot these with the geom_point function
+
+ggplot() +
+  geom_point(
+    data = movies_correcr, #select the correct data file
+    mapping = aes(x = budget, y = revenue) #assigning  x and y variable
+  ) + # adding a title
+  ggtitle("The relation between revenue and budget of 2000s movies") 
+  
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
