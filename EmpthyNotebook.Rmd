@@ -3,9 +3,7 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+In this report we are going to look at the question if movies from the 2000s with a higher budget also have a higher revenue. The variables we thus have to look at are the budgets and revenues. The data used to answer this question is acquired from the IMDB site. The data frame contains columns with id, IMDB id', title of the movie, decade and much more. To answer the question we will plot the variables of budget and revenue in a scatterplot. We will therfore use points as geoms.
 
 ```{r}
 plot(cars)
