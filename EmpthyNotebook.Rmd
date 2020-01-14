@@ -6,7 +6,11 @@ output: html_notebook
 In this report we are going to look at the question if movies from the 2000s with a higher budget also have a higher revenue. The variables we thus have to look at are the budgets and revenues. The data used to answer this question is acquired from the IMDB site. The data frame contains columns with id, IMDB id', title of the movie, decade and much more. To answer the question we will plot the variables of budget and revenue in a scatterplot. We will therfore use points as geoms.
 
 ```{r}
-plot(cars)
+library(tidyverse)
+# Firstly, we have to filter out the correct decade, the 2000s, from the data file. Therefore, we need to use the filter function
+
+movies_correcr <- movies %>% #creates a new data file
+  filter(decade== "2000s")#with only movies from th 2000s
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
